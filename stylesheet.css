@@ -1,0 +1,77 @@
+/* font-family: 'Montserrat', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap");
+
+/* font-family: 'Mukta', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;600;700&display=swap");
+
+:root {
+	font-size: 20px;
+	font-family: "Mukta", sans-serif;
+	--text-light: white;
+}
+
+body {
+	background: rgb(252, 155, 66);
+	background: linear-gradient(160deg, rgb(103, 103, 158) 0%, #f69af9 100%);
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	color: var(--text-light);
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav > .searchBar {
+	max-width: 450px;
+	width: 100%;
+	text-align: center;
+	border-radius: 18px;
+	padding-left: 15px;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.247);
+}
+
+nav > h1 {
+	text-transform: uppercase;
+}
+
+.searchBar > input {
+	width: 85%;
+	border: 0;
+	height: 40px;
+	background: transparent;
+	outline: none;
+	font-size: 0.9rem;
+	color: var(--text-light);
+	text-transform: uppercase;
+}
+
+.searchBar > button {
+	width: 15%;
+	border: 0;
+	cursor: pointer;
+	background: transparent;
+	font-size: 1em;
+	color: var(--text-light);
+}
+
+@media (max-width: 1024px) {
+    :root {
+        font-size: 15px;
+    }
+
+	body {
+        margin: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+}
