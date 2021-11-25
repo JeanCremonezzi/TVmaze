@@ -10,7 +10,7 @@ const getShows = (querySearch) => {
         method: "GET",
         url: ` https://api.tvmaze.com/search/shows?q=${querySearch}`,
         success: (resp) => {
-            console.log(resp);
+            console.log(resp[3].show.summary);
             populateShows(resp);
             return;
         },
@@ -21,6 +21,8 @@ const getShows = (querySearch) => {
 };
 
 const populateShows = (shows) => {
+    $(".container").empty();
+
     shows.map((show) => {
         let showCard = componentCard(show.show);
 
@@ -46,7 +48,11 @@ const componentCard = (show) => {
     let name = $(`<p>${show.name}</p>`);
     name.attr({"class": "cardTitle"});
 
-    let summary = $(`<p>${show.summary}</p>`);
+    let txtSummary = show.summary;
+    let summary = $("<p></p>");
+    if (txtSummary != null) {
+        summary.append(txtSummary);
+    };
     summary.attr({"class": "cardSummary"});
 
     layer.append(name, summary);
