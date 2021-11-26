@@ -129,19 +129,20 @@ nav > h1 {
 }
 
 .modal {
-    padding: 20px 10px;
+    padding: 20px 30px;
     width: 1000px;
 	max-width: 90%;
     max-height: 80%;
 	height: 100%;
-    background: white;
+    /*background: #333333;*/
+    background: #272727;
     border-radius: 15px;
-    color: #121212;
+    color: white;
     overflow: auto;
 
     display: flex;
-    justify-content: center;
-    text-align: center;
+	flex-direction: column;
+	align-items: center;
 
     position: fixed;
     top: 50%;
@@ -153,14 +154,46 @@ nav > h1 {
 .overlay {
     cursor: pointer;
     position: absolute;
-	top: 0;
-	left: 0;
     width: 100%;
-    height: 100vh;
+	height: 150%;
     background: #121212be;
     justify-content: center;
     align-items: center;
     z-index: 2;
+}
+
+.episodeRow {
+	margin-top: 25px;
+	width: 100%;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	background: #0e0e0e9f;
+	box-shadow: 0px 10px 6px -6px rgba(10, 10, 10, 0.774);
+}
+
+.episodeRow > img {
+	border-radius: 10px 0 0 10px;
+	height: 100px;
+	width: 180px;
+}
+
+.episodeInfo {
+	margin-left: 15px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.episodeInfo span {
+	font-weight: bolder;
+}
+
+.episodeInfo p {
+	font-weight: lighter;
 }
 
 @media (max-width: 1024px) {
@@ -188,6 +221,5 @@ nav > h1 {
 
     .cardSummary {
         -webkit-line-clamp: 4;
-    
     }
 }
