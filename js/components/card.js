@@ -1,3 +1,5 @@
+import {getEpisodes} from "./showEpisodes.js";
+
 export function componentCard (show) {
     let col = $("<div></div>");
     col.attr({"class": "col"});
@@ -25,6 +27,10 @@ export function componentCard (show) {
 
     layer.append(name, summary);
     col.append(card, layer);
+
+    col.on("click", () => {
+        getEpisodes(show);
+    });
 
     return col;
 }

@@ -34,8 +34,6 @@ const populateShows = (shows) => {
     } else {
         let rowVazio = $("<div>Nenhuma série foi encontrada!</div>");
         rowVazio.attr({"class": "rowVazio"});
-        
-
 
         $(".container").append(rowVazio);
     }
